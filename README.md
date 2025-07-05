@@ -5,12 +5,6 @@ A deep learning-powered web application that detects diseases in plant leaves (c
 
 ---
 
-## 🔍 Demo
-
-https://user-streamlit-app-link (Replace with your deployed app link)
-
----
-
 ## 📸 Sample Predictions
 
 | Image | Prediction |
@@ -58,8 +52,8 @@ https://user-streamlit-app-link (Replace with your deployed app link)
 plant_disease_detection/
 │
 ├── plant_disease.keras          # Trained model
-├── app.py                       # Streamlit App
-├── assets/                      # Sample leaf images
+├── main.py                       # Streamlit App
+├── plant_data/                      # Sample leaf images
 └── README.md
 ```
 
