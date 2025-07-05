@@ -12,7 +12,7 @@ model = load_model('C:/Users/Sayandeep Mondal/solo_pjcts/plant_disease_detection
 CLASS_NAMES = ['Corn-Common_rust', 'Potato-Early_blight', 'Tomato-Bacterial_spot']
 
 #Setting Title of App
-st.title("Plant Disease Detection")
+st.title("🌱 Plant Disease Detection")
 st.markdown("Upload an image of the plant leaf")
 
 #Uploading the dog image
@@ -32,7 +32,6 @@ if submit:
 
         # Displaying the image
         st.image(opencv_image, channels="BGR")
-        st.write(opencv_image.shape)
         #Resizing the image
         opencv_image = cv2.resize(opencv_image, (256,256))
         #Convert image to 4 Dimension
@@ -40,4 +39,5 @@ if submit:
         #Make Prediction
         Y_pred = model.predict(opencv_image)
         result = CLASS_NAMES[np.argmax(Y_pred)]
+        st.markdown(f"### 🎯 Detection Results")
         st.title(str("This is "+result.split('-')[0]+ " leaf with " + result.split('-')[1]))
