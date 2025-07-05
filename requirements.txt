@@ -1,0 +1,5 @@
+streamlit
+opencv-python
+numpy
+tensorflow==2.13.0  # or compatible with your GPU
+keras
